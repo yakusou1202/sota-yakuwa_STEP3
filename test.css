@@ -1,60 +1,80 @@
-/* 全体のマージンをリセットして隙間をなくす */
-body {
+* {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* 画面中央に配置 */
+    box-sizing: border-box;
 }
 
-/* ヘッダー・サイドバー・メイン・フッターを隙間なく配置 */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 header {
     width: 800px;
     height: 100px;
-    background-color: #f8d7da; /* 自由な色 */
+    background-color: #ffff66;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
-    display: flex; /* サイドバーとメインを横並びに */
+    display: flex;
     width: 800px;
 }
 
 .sidebar {
     width: 200px;
-    height: 450px;
-    background-color: #e2e3e5; /* 自由な色 */
+    height: 400px;
+    background-color: #7fffd4;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 5px;
 }
 
 main {
     flex: 1;
-    height: 450px;
-    background-color: #ffffff;
-    padding: 20px;
+    height: 400px;
+    background-color: #ffebcd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 footer {
     width: 800px;
-    height: 50px;
-    background-color: #d1ecf1; /* 自由な色 */
-    text-align: center;
+    height: 60px;
+    background-color: #d3d3d3;
 }
 
-/* テーブルのスタイル：指示通り枠線4px */
 table {
     border-collapse: collapse;
-    border: 4px solid #333; 
-    margin: 0 auto; /* 真ん中に設定 */
+    border: 4px solid #333;
+    background-color: #fff;
+    margin: 0 auto;
 }
 
 th, td {
     border: 1px solid #333;
-    padding: 8px;
+    padding: 3px 8px;
+    font-size: 14px;
 }
 
-/* 送信ボタンは右側に寄せる */
+th {
+    text-align: center;
+    width: 120px;
+}
+
 .submit-container {
-    text-align: right;
     width: 100%;
-    max-width: 400px; /* テーブルの幅に合わせて調整 */
-    margin: 10px auto 0;
+    text-align: right;
+    margin-top: 10px;
+    padding-right: 5px;
 }
