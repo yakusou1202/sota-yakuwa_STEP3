@@ -1,4 +1,3 @@
-/* すべての要素の余白をリセット */
 * {
     margin: 0;
     padding: 0;
@@ -11,14 +10,13 @@ body {
     align-items: center;
 }
 
-/* ヘッダー：文字を中央寄せにする */
 header {
     width: 800px;
     height: 100px;
-    background-color: #ffff66; /* お手本に近い黄色 */
+    background-color: #ffff66;
     display: flex;
     align-items: center;
-    justify-content: center; /* これで真ん中になります！ */
+    justify-content: center;
 }
 
 .container {
@@ -28,49 +26,55 @@ header {
 
 .sidebar {
     width: 200px;
-    height: 350px;
-    background-color: #7fffd4; /* お手本に近い水色 */
+    height: 400px;
+    background-color: #7fffd4;
     padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 5px;
 }
 
 main {
     flex: 1;
-    height: 350px;
-    background-color: #ffe4c4; /* お手本に近い薄橙色 */
-    padding: 20px;
+    height: 400px;
+    background-color: #ffebcd;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
-/* フッター：containerと密着させて隙間をなくす */
 footer {
     width: 800px;
     height: 60px;
-    background-color: #d3d3d3; /* お手本に近いグレー */
+    background-color: #d3d3d3;
 }
 
 table {
     border-collapse: collapse;
-    border: 4px solid #333; /* ここを 4px solid に変更！ */
+    border: 4px solid #333;
     background-color: #fff;
     margin: 0 auto;
 }
 
 th, td {
     border: 1px solid #333;
-    padding: 2px 10px;
+    padding: 3px 8px;
     font-size: 14px;
 }
 
 th {
-    background-color: #fff;
-    font-weight: bold;
+    text-align: center;
+    width: 120px;
 }
 
 .submit-container {
-    text-align: right;
     width: 100%;
-    padding-top: 10px;
-    padding-right: 20px;
+    text-align: right;
+    margin-top: 10px;
+    padding-right: 5px;
 }
