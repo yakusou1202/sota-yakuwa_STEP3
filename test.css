@@ -1,60 +1,76 @@
-/* 全体のマージンをリセットして隙間をなくす */
-body {
+/* すべての要素の余白をリセット */
+* {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* 画面中央に配置 */
+    box-sizing: border-box;
 }
 
-/* ヘッダー・サイドバー・メイン・フッターを隙間なく配置 */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ヘッダー：文字を中央寄せにする */
 header {
     width: 800px;
     height: 100px;
-    background-color: #f8d7da; /* 自由な色 */
+    background-color: #ffff66; /* お手本に近い黄色 */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* これで真ん中になります！ */
 }
 
 .container {
-    display: flex; /* サイドバーとメインを横並びに */
+    display: flex;
     width: 800px;
 }
 
 .sidebar {
     width: 200px;
-    height: 450px;
-    background-color: #e2e3e5; /* 自由な色 */
+    height: 350px;
+    background-color: #7fffd4; /* お手本に近い水色 */
+    padding: 20px;
 }
 
 main {
     flex: 1;
-    height: 450px;
-    background-color: #ffffff;
+    height: 350px;
+    background-color: #ffe4c4; /* お手本に近い薄橙色 */
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+/* フッター：containerと密着させて隙間をなくす */
 footer {
     width: 800px;
-    height: 50px;
-    background-color: #d1ecf1; /* 自由な色 */
-    text-align: center;
+    height: 60px;
+    background-color: #d3d3d3; /* お手本に近いグレー */
 }
 
-/* テーブルのスタイル：指示通り枠線4px */
 table {
     border-collapse: collapse;
-    border: 4px solid #333; 
-    margin: 0 auto; /* 真ん中に設定 */
+    border: 3px double #333; /* お手本のような二重線風の枠 */
+    background-color: #fff;
+    margin: 0 auto;
 }
 
 th, td {
     border: 1px solid #333;
-    padding: 8px;
+    padding: 2px 10px;
+    font-size: 14px;
 }
 
-/* 送信ボタンは右側に寄せる */
+th {
+    background-color: #fff;
+    font-weight: bold;
+}
+
 .submit-container {
     text-align: right;
     width: 100%;
-    max-width: 400px; /* テーブルの幅に合わせて調整 */
-    margin: 10px auto 0;
+    padding-top: 10px;
+    padding-right: 20px;
 }
